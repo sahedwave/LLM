@@ -1,0 +1,50 @@
+{
+  "PWR_17x17": {
+    "geometry": "pwr_17x17",
+    "fuel": "UO2_3.2",
+    "moderator": "water",
+    "boundary_conditions": "reflective",
+    "neutron_histories": 20000,
+    "constraints": {
+      "nominal_temp": 600,
+      "min_density": 0.70,
+      "max_temp": 800
+    }
+  },
+  "simplified_LOCA_core": {
+    "geometry": "pwr_simplified",
+    "fuel": "UO2_3.2",
+    "moderator": "water",
+    "boundary_conditions": "reflective",
+    "neutron_histories": 20000,
+    "constraints": {
+      "nominal_temp": 640,
+      "min_density": 0.20,
+      "max_temp": 800
+    }
+  },
+  "decay_heat_core": {
+    "geometry": "decay_heat_proxy",
+    "fuel": "UO2_3.2",
+    "moderator": "water",
+    "boundary_conditions": "reflective",
+    "neutron_histories": 15000,
+    "constraints": {
+      "nominal_temp": 610,
+      "min_density": 0.68,
+      "max_temp": 760
+    }
+  },
+  "kinetics_proxy_core": {
+    "geometry": "kinetics_proxy",
+    "fuel": "UO2_3.2",
+    "moderator": "water",
+    "boundary_conditions": "reflective",
+    "neutron_histories": 18000,
+    "constraints": {
+      "nominal_temp": 600,
+      "min_density": 0.74,
+      "max_temp": 750
+    }
+  }
+}

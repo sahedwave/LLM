@@ -1,0 +1,16 @@
+default_backend: proxy
+max_timeout_seconds: 60
+max_neutron_histories: 50000
+min_coolant_density: 0.2
+max_coolant_density: 1.0
+min_temperature: 250
+max_temperature: 900
+allowed_backends:
+  - proxy
+  - local_subprocess
+  - docker
+allowed_templates:
+  - PWR_17x17
+  - simplified_LOCA_core
+  - decay_heat_core
+  - kinetics_proxy_core

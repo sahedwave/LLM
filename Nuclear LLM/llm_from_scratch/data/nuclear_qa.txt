@@ -1,0 +1,299 @@
+Q: What is neutron flux?
+A: Neutron flux is the number of neutrons passing through a unit area in a unit time. It shows how intense the neutron field is inside a reactor.
+
+Q: Why is neutron flux important in a reactor?
+A: Neutron flux strongly affects the fission rate. When flux rises, reactor power usually rises because more fission events occur.
+
+Q: What units are commonly used for neutron flux?
+A: Neutron flux is often expressed in neutrons per square centimeter per second. This is written as n/cm^2-s.
+
+Q: How does neutron flux relate to reactor power?
+A: Higher neutron flux usually means more fissions per second. More fissions release more heat, so power increases.
+
+Q: What is the difference between thermal neutrons and fast neutrons?
+A: Thermal neutrons move slowly and are more likely to cause fission in U-235. Fast neutrons move much faster and usually need moderation to become more effective in thermal reactors.
+
+Q: Why can neutron flux vary from one part of the core to another?
+A: Fuel arrangement, control rod position, and coolant conditions are not perfectly uniform. These differences create local peaks and valleys in flux.
+
+Q: How do engineers measure neutron flux in a reactor?
+A: They use neutron detectors such as ion chambers and fission chambers. The detector signal is linked to neutron population and reactor power.
+
+Q: What happens to neutron flux when control rods are inserted?
+A: Control rods absorb neutrons, so fewer are available to cause fission. This lowers neutron flux and reduces power.
+
+Q: How does a moderator affect neutron flux behavior?
+A: A moderator slows fast neutrons to thermal energies. In many reactors this raises the chance of fission and helps sustain the chain reaction.
+
+Q: Why are flux peaks important in reactor design?
+A: A local flux peak can create a local power peak. That region may heat more than the rest of the core and must stay within safety limits.
+
+Q: What is k-effective?
+A: k-effective is the ratio of neutrons in one generation to neutrons in the previous generation. It indicates whether the chain reaction is shrinking, steady, or growing.
+
+Q: What does k-effective equal to 1 mean?
+A: It means the reactor is critical. Each neutron generation exactly replaces itself, so power stays steady.
+
+Q: What does k-effective less than 1 mean?
+A: It means the reactor is subcritical. The neutron population decreases with time, so the chain reaction dies down.
+
+Q: What does k-effective greater than 1 mean?
+A: It means the reactor is supercritical. The neutron population grows, so reactor power tends to increase.
+
+Q: What factors can change k-effective?
+A: Fuel temperature, moderator density, control rod position, soluble boron, and neutron leakage can all change k-effective. Each affects how many neutrons cause new fissions.
+
+Q: How does neutron leakage affect k-effective?
+A: Neutrons that leak out of the core cannot cause more fissions. More leakage lowers k-effective.
+
+Q: How does soluble boron affect k-effective in a PWR?
+A: Boron absorbs neutrons in the coolant. Increasing boron concentration lowers k-effective and helps control reactivity.
+
+Q: Why is xenon-135 important to k-effective?
+A: Xenon-135 is a very strong neutron absorber. When its concentration rises, it can significantly reduce k-effective and reactor power.
+
+Q: How does fuel burnup influence k-effective?
+A: As fuel is used, fissile material decreases and neutron-absorbing fission products build up. Both effects tend to lower k-effective over time.
+
+Q: Why do operators track k-effective during reactor analysis?
+A: It gives a direct measure of core multiplication. That helps them judge criticality, shutdown margin, and fuel cycle behavior.
+
+Q: What is reactor criticality?
+A: Criticality describes whether a nuclear chain reaction is self-sustaining. It depends on whether neutron production balances neutron losses.
+
+Q: What is a subcritical reactor state?
+A: In a subcritical state, too few neutrons survive to keep the chain reaction going. Power falls unless an external neutron source is present.
+
+Q: What is a supercritical reactor state?
+A: In a supercritical state, neutron production exceeds neutron losses. This causes reactor power to rise.
+
+Q: Why are delayed neutrons important for reactor control?
+A: Delayed neutrons are emitted slightly after fission rather than instantly. They slow the reactor response enough for human and automatic control systems to act.
+
+Q: What does prompt critical mean?
+A: Prompt critical means the chain reaction can be sustained by prompt neutrons alone. Power can rise extremely fast, so this condition is avoided in normal operation.
+
+Q: What is reactivity?
+A: Reactivity is a measure of how far the reactor is from criticality. Positive reactivity pushes power up, while negative reactivity pushes power down.
+
+Q: What happens when positive reactivity is inserted?
+A: More neutrons survive to create new fissions. Reactor power tends to increase unless feedback or control action offsets it.
+
+Q: What is negative reactivity feedback?
+A: It is a natural response where rising temperature or other changes reduce reactivity. This helps stabilize the reactor.
+
+Q: What is a reactor scram?
+A: A scram is a rapid shutdown of the reactor. Control rods are inserted quickly to add strong negative reactivity.
+
+Q: Why is shutdown margin important?
+A: Shutdown margin shows the reactor can remain safely subcritical even under expected conditions. It is a key part of defense against unintended criticality.
+
+Q: Where does heat in a nuclear reactor come from?
+A: Most reactor heat comes from fission of heavy nuclei such as U-235. The kinetic energy of fission fragments is converted into thermal energy in the fuel.
+
+Q: How is fission energy turned into useful heat?
+A: Fission fragments and radiation deposit energy inside the fuel and nearby materials. That energy raises temperature and is transferred to the coolant.
+
+Q: What is decay heat?
+A: Decay heat is the heat released by radioactive decay after fission has stopped. It remains significant after shutdown and must still be removed.
+
+Q: Why is decay heat removal necessary after shutdown?
+A: The core continues producing heat even when the chain reaction stops. Without cooling, fuel temperature can rise high enough to cause damage.
+
+Q: How does coolant remove heat from the core?
+A: Coolant flows past the fuel and absorbs thermal energy. It then carries that heat to a steam generator, turbine cycle, or other heat sink.
+
+Q: Why does fuel temperature matter?
+A: Higher fuel temperature changes material properties and heat transfer conditions. Excessive temperature can damage fuel pellets and cladding.
+
+Q: What is the role of fuel cladding in heat generation systems?
+A: Cladding contains fission products and separates fuel from coolant. It also provides the main path for heat to move from fuel into the coolant.
+
+Q: Why is good heat transfer important in reactor operation?
+A: Efficient heat transfer keeps fuel and cladding temperatures within safe limits. It also supports steady and predictable plant power production.
+
+Q: What is the purpose of a steam generator in a PWR?
+A: A steam generator transfers heat from the radioactive primary coolant to the secondary side. This boils clean secondary water into steam for the turbine.
+
+Q: Why is thermal efficiency limited in many nuclear plants?
+A: Reactor materials and safety limits cap the temperatures that can be reached. Lower peak temperature means lower thermodynamic efficiency than many fossil plants.
+
+Q: What is the basic purpose of the steam cycle?
+A: The steam cycle converts reactor heat into mechanical work and then electricity. It does this by boiling water, expanding steam through a turbine, and condensing it afterward.
+
+Q: Why is steam produced from reactor heat?
+A: Steam can expand through turbine blades and deliver mechanical power. This makes it a practical working fluid for electricity generation.
+
+Q: What does the condenser do in the steam cycle?
+A: The condenser turns exhaust steam back into liquid water. This allows the water to be pumped back into the cycle and also improves turbine efficiency by maintaining low exhaust pressure.
+
+Q: Why is feedwater important in a steam cycle?
+A: Feedwater is the water returned to the boiler or steam generator. Keeping the right feedwater flow maintains stable steam production and plant power.
+
+Q: Why is low condenser pressure useful?
+A: Lower pressure at the turbine exhaust lets steam expand more through the turbine. That increases the amount of work extracted from the steam.
+
+Q: What is the purpose of a feedwater pump?
+A: It raises the pressure of condensed water so the water can re-enter the steam generator or reactor system. Pumping closes the Rankine cycle.
+
+Q: Why is steam quality important for turbines?
+A: Steam with too much liquid water can erode turbine blades and reduce efficiency. Dry or slightly superheated steam is preferred.
+
+Q: What is the Rankine cycle?
+A: The Rankine cycle is the basic heat engine cycle used in steam power plants. Water is pumped, heated to steam, expanded in a turbine, then condensed and pumped again.
+
+Q: Why are moisture separators used in some steam systems?
+A: They remove water droplets from steam before it reaches later turbine stages. This protects blades and improves efficiency.
+
+Q: How does a turbine produce useful power?
+A: High-energy steam expands across turbine blades and makes the rotor spin. The rotating shaft then drives the electrical generator.
+
+Q: What is the job of the generator connected to a turbine?
+A: The generator converts mechanical shaft rotation into electrical energy. It uses electromagnetic induction to produce electric power.
+
+Q: Why are there high-pressure and low-pressure turbine sections?
+A: Steam changes pressure and volume as it expands. Using separate sections improves efficiency and handles the changing steam conditions better.
+
+Q: What happens during a turbine trip?
+A: Steam admission is rapidly stopped to protect the machine. Reactor and balance-of-plant systems then respond to the sudden load change.
+
+Q: Why is turbine overspeed dangerous?
+A: Excessive rotational speed creates very high mechanical stress. If not controlled, it can damage blades, bearings, or the rotor.
+
+Q: What is the purpose of turbine control valves?
+A: They regulate how much steam enters the turbine. This helps control turbine speed, output, and safe operation.
+
+Q: Why is exhaust moisture a concern in turbines?
+A: Water droplets strike blades at high velocity and can erode metal surfaces. This reduces efficiency and shortens component life.
+
+Q: How does the condenser support turbine performance?
+A: By condensing exhaust steam, it keeps exhaust pressure low. That allows the turbine to extract more work from the steam.
+
+Q: Why are turbine vibrations closely monitored?
+A: Unusual vibration can signal imbalance, rubbing, or bearing problems. Early detection prevents larger mechanical failures.
+
+Q: What is a LOCA?
+A: LOCA stands for loss of coolant accident. It is an event where reactor coolant is lost from the primary system faster than normal makeup can replace it.
+
+Q: Why is a LOCA dangerous?
+A: Loss of coolant reduces the core's ability to remove heat. If cooling is not restored, fuel and cladding temperatures can rise sharply.
+
+Q: What is the first safety concern during a LOCA?
+A: The immediate concern is maintaining core cooling. Operators and automatic systems work to keep fuel covered and remove decay heat.
+
+Q: What is the emergency core cooling system?
+A: The emergency core cooling system, or ECCS, injects water into the reactor after certain accidents. Its purpose is to keep the core cooled and limit fuel damage.
+
+Q: What is the difference between a small-break and large-break LOCA?
+A: A small-break LOCA loses coolant through a smaller opening and may progress more slowly. A large-break LOCA causes rapid depressurization and faster coolant loss.
+
+Q: Why can cladding temperature rise during a LOCA?
+A: Coolant flow and heat transfer drop when water inventory is lost. Fuel heat and decay heat then drive the cladding temperature upward.
+
+Q: What does core uncovery mean?
+A: Core uncovery means water no longer fully covers the fuel. Exposed fuel heats up much faster because cooling is greatly reduced.
+
+Q: What is the role of containment during a LOCA?
+A: Containment limits the release of radioactive material to the environment. It also provides a controlled space for pressure, steam, and accident mitigation systems.
+
+Q: What are accumulators in some reactor safety systems?
+A: Accumulators are tanks of borated water pressurized with gas. When system pressure drops, they inject coolant automatically into the reactor.
+
+Q: Why is long-term cooling important after a LOCA?
+A: The accident does not end when the initial break is isolated. Decay heat continues for a long time, so reliable cooling is needed until stable conditions are restored.
+
+Q: What is defense in depth in nuclear safety?
+A: Defense in depth means using multiple layers of prevention, control, and mitigation. If one layer fails, others still protect the public and the plant.
+
+Q: Why are redundant safety systems used?
+A: Redundancy means having multiple components that perform the same safety function. If one fails, another can still do the job.
+
+Q: What is diversity in safety system design?
+A: Diversity means using different methods or equipment to achieve a safety function. This reduces the chance that one common cause disables all systems.
+
+Q: What does the reactor protection system do?
+A: It monitors key parameters and automatically trips the reactor when limits are exceeded. This quickly inserts negative reactivity and starts other protective actions.
+
+Q: Why are emergency diesel generators important?
+A: They provide backup electrical power if offsite power is lost. Safety pumps, controls, and instrumentation depend on reliable emergency power.
+
+Q: What is a containment spray system used for?
+A: It sprays water inside containment to reduce pressure and temperature after some accidents. It can also help remove iodine and other materials from the containment atmosphere.
+
+Q: What are passive safety systems?
+A: Passive safety systems rely mainly on natural forces such as gravity, natural circulation, or stored pressure. They need little or no active power to function.
+
+Q: Why are safety interlocks used in nuclear plants?
+A: Interlocks prevent actions that could place the plant in an unsafe condition. They enforce correct sequence and equipment alignment.
+
+Q: Why are periodic safety tests performed?
+A: Testing confirms that valves, pumps, sensors, and logic still work as required. It helps detect hidden failures before a real event occurs.
+
+Q: Why is spent fuel pool cooling important?
+A: Spent fuel continues to produce decay heat after removal from the core. Pool cooling prevents overheating and helps shield radiation.
+
+Q: What are alpha particles?
+A: Alpha particles are helium nuclei emitted by some radioactive materials. They are strongly ionizing but are stopped easily by paper or skin.
+
+Q: What are beta particles?
+A: Beta particles are fast electrons or positrons from radioactive decay. They penetrate farther than alpha particles but are usually stopped by light shielding such as plastic or aluminum.
+
+Q: What are gamma rays?
+A: Gamma rays are high-energy photons emitted from nuclei. They are very penetrating and often require dense shielding such as lead or thick concrete.
+
+Q: What is neutron radiation?
+A: Neutron radiation consists of free neutrons moving through matter. Because neutrons are uncharged, they penetrate deeply and often require hydrogen-rich shielding materials.
+
+Q: What does ionizing radiation mean?
+A: Ionizing radiation has enough energy to remove electrons from atoms or molecules. That ionization can damage biological tissue and electronic materials.
+
+Q: What is the difference between exposure and contamination?
+A: Exposure means radiation is passing through or reaching a person. Contamination means radioactive material is actually on the body, clothing, or surfaces.
+
+Q: What is half-life?
+A: Half-life is the time required for half of a radioactive sample to decay. It describes how quickly the activity decreases.
+
+Q: What is absorbed dose?
+A: Absorbed dose is the amount of radiation energy deposited per unit mass. It is commonly measured in gray.
+
+Q: What is equivalent or effective dose?
+A: Equivalent and effective dose account for the biological effect of different radiation types and tissues. They are commonly measured in sievert.
+
+Q: Why is water a useful radiation shield?
+A: Water contains hydrogen, which slows neutrons well, and it also attenuates gamma radiation to some extent. That makes it useful for both cooling and shielding.
+
+Q: What materials are commonly used to shield gamma radiation?
+A: Dense materials such as lead, steel, and concrete are commonly used. Their high density helps absorb gamma energy.
+
+Q: What materials are useful for neutron shielding?
+A: Hydrogen-rich materials such as water, polyethylene, and concrete are effective. Boron is also useful because it can absorb slowed neutrons.
+
+Q: What does ALARA mean?
+A: ALARA means keeping radiation exposure as low as reasonably achievable. It is applied through time reduction, distance, shielding, and good work planning.
+
+Q: Why does distance reduce radiation dose?
+A: For many sources, intensity drops as distance increases. This follows the inverse square trend for point-like radiation sources.
+
+Q: What is a dosimeter used for?
+A: A dosimeter measures or records a worker's radiation exposure. It helps confirm that doses stay within allowed limits.
+
+Q: What is background radiation?
+A: Background radiation is the natural radiation people receive from the earth, space, food, and the human body. It is present even without nuclear facilities.
+
+Q: Why is contamination control important?
+A: It prevents radioactive material from spreading to people, tools, and clean areas. Good contamination control reduces both dose and cleanup burden.
+
+Q: What is reactor coolant activity?
+A: Reactor coolant activity is the radioactivity present in the coolant. It can come from activated corrosion products, dissolved gases, or leaking fuel.
+
+Q: Why is fuel cladding called a barrier?
+A: Cladding keeps most fission products inside the fuel rod. It is one of the key barriers that protect workers and the environment.
+
+Q: What is the main purpose of a moderator?
+A: A moderator slows down neutrons without absorbing too many of them. In thermal reactors this increases the probability of fission in the fuel.
+
+Q: What materials are often used for control rods?
+A: Control rods often use neutron-absorbing materials such as boron carbide, silver-indium-cadmium, or hafnium. These materials efficiently remove neutrons from the chain reaction.
+
+Q: Why is pressure kept high in a pressurized water reactor?
+A: High pressure prevents the primary coolant from boiling in the core. This lets the water remove heat while remaining liquid.

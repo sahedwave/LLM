@@ -1,0 +1,40 @@
+{
+  "0a7dc361fa1f5c4e262a82fa0277541f656a1e0d4cded47ef174cdf044bafdc9": {
+    "backend": "proxy",
+    "config_hash": "0a7dc361fa1f5c4e262a82fa0277541f656a1e0d4cded47ef174cdf044bafdc9",
+    "flux": "core-centered flux profile with stable moderation",
+    "k_eff": 1.005,
+    "reaction_rates": {
+      "capture_rate": 0.51,
+      "fission_rate": 0.96,
+      "moderation_gain": 0.64
+    },
+    "warnings": []
+  },
+  "b21e88cced5cd7c2e63db82ab8cbc1a8cf1daebb0bd268439da96d451345dfad": {
+    "backend": "proxy",
+    "config_hash": "b21e88cced5cd7c2e63db82ab8cbc1a8cf1daebb0bd268439da96d451345dfad",
+    "flux": "low prompt flux with persistent residual heat",
+    "k_eff": 0.98,
+    "reaction_rates": {
+      "capture_rate": 0.27,
+      "decay_heat": 0.66,
+      "fission_rate": 0.11
+    },
+    "warnings": []
+  },
+  "f54031d36ad592d5efeec1b6590360ad975cbeedbdedf8dd360b7209b87c646f": {
+    "backend": "proxy",
+    "config_hash": "f54031d36ad592d5efeec1b6590360ad975cbeedbdedf8dd360b7209b87c646f",
+    "flux": "rapid flux drop after moderator density collapses",
+    "k_eff": 0.95,
+    "reaction_rates": {
+      "capture_rate": 0.63,
+      "fission_rate": 0.81,
+      "heat_removal": 0.34
+    },
+    "warnings": [
+      "subcritical tendency detected"
+    ]
+  }
+}

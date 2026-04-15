@@ -1,0 +1,12 @@
+{
+  "artifact_schema_version": "artifact-lock-v1",
+  "model_version": "phase5-semantic-transformer-v1",
+  "dataset_hash": "4cf8c30be6265799070272ceeeb0672b0da85852ff7bb4ce7a063f2047b3ea27",
+  "tokenizer_hash": "b760ad1a49097f72ba356bd04d1bb53373a9b9e705e0156ea3e9450497b146dd",
+  "vocab_size": 1307,
+  "block_size": 64,
+  "concept_prefix_enabled": true,
+  "text_length": 525152,
+  "tokenizer_version": "immutable-tokenizer-b760ad1a4909",
+  "dataset_version": "immutable-corpus-4cf8c30be626"
+}
