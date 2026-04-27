@@ -22,6 +22,7 @@ from src.execution_graph import (
 PROJECT_DIR = Path(__file__).resolve().parent
 WEB_DIR = PROJECT_DIR / "chat_ui"
 STATIC_DIR = WEB_DIR / "static"
+VOICE_DIR = PROJECT_DIR / "casual" / "voice_interact"
 HOST = os.environ.get("NUCLEAR_LLM_CHAT_HOST", "127.0.0.1")
 PORT = int(os.environ.get("NUCLEAR_LLM_CHAT_PORT", "8008"))
 
@@ -31,11 +32,15 @@ close_bootstrap_window()
 activate_dag_execution()
 mark_state("EVAL_ONLY")
 
-from generate import generate_text, load_runtime  # noqa: E402
-from stage6_openmc.tool_router import route_query  # noqa: E402
+from casual.casual_router import load_casual_runtime, route as route_message  # noqa: E402
+from casual.voice_interact.styletts2_service import StyleTTS2Service  # noqa: E402
+from generate import load_runtime  # noqa: E402
 
 
 RUNTIME = load_runtime()
+CASUAL_RUNTIME = load_casual_runtime()
+VOICE_SERVICE = StyleTTS2Service()
+VOICE_SERVICE.prewarm_async()
 
 
 def _read_text(path: Path) -> bytes:
@@ -61,6 +66,9 @@ def _serve_file(handler: BaseHTTPRequestHandler, path: Path) -> None:
     handler.send_response(HTTPStatus.OK)
     handler.send_header("Content-Type", content_type or "application/octet-stream")
     handler.send_header("Content-Length", str(len(content)))
+    handler.send_header("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0")
+    handler.send_header("Pragma", "no-cache")
+    handler.send_header("Expires", "0")
     handler.end_headers()
     handler.wfile.write(content)
 
@@ -77,17 +85,20 @@ class ChatHandler(BaseHTTPRequestHandler):
             relative = parsed.path.removeprefix("/static/")
             _serve_file(self, STATIC_DIR / relative)
             return
+        if parsed.path.startswith("/voice_interact/"):
+            relative = parsed.path.removeprefix("/voice_interact/")
+            _serve_file(self, VOICE_DIR / relative)
+            return
         if parsed.path == "/api/health":
             _json_response(self, {"status": "ok", "host": HOST, "port": PORT})
+            return
+        if parsed.path == "/api/tts/status":
+            _json_response(self, VOICE_SERVICE.describe_status())
             return
         _json_response(self, {"error": "not_found"}, status=404)
 
     def do_POST(self) -> None:  # noqa: N802
         parsed = urlparse(self.path)
-        if parsed.path != "/api/chat":
-            _json_response(self, {"error": "not_found"}, status=404)
-            return
-
         length = int(self.headers.get("Content-Length", "0"))
         raw = self.rfile.read(length)
         try:
@@ -96,13 +107,31 @@ class ChatHandler(BaseHTTPRequestHandler):
             _json_response(self, {"error": "invalid_json"}, status=400)
             return
 
+        if parsed.path == "/api/tts":
+            text = str(payload.get("text", "")).strip()
+            if not text:
+                _json_response(self, {"error": "empty_text"}, status=400)
+                return
+
+            result = VOICE_SERVICE.synthesize(
+                text=text,
+                emotion=str(payload.get("emotion", "") or "").strip() or None,
+            )
+            status = 200 if result.get("ok") else 503
+            _json_response(self, result, status=status)
+            return
+
+        if parsed.path != "/api/chat":
+            _json_response(self, {"error": "not_found"}, status=404)
+            return
+
         message = str(payload.get("message", "")).strip()
         if not message:
             _json_response(self, {"error": "empty_message"}, status=400)
             return
 
         try:
-            payload = generate_text(query=message, runtime=RUNTIME, return_metadata=True)
+            payload = route_message(message, RUNTIME, CASUAL_RUNTIME)
         except Exception as exc:  # pragma: no cover - defensive server path
             _json_response(
                 self,
@@ -116,6 +145,7 @@ class ChatHandler(BaseHTTPRequestHandler):
             {
                 "answer": payload["answer"],
                 "route": payload["route"],
+                "model_used": payload.get("model_used"),
                 "pcgs_v2": payload["pcgs_v2"],
                 "sas_score": payload["sas_score"],
                 "used_simulation": payload["used_simulation"],
@@ -139,6 +169,7 @@ def run_server(host: str = HOST, port: int = PORT) -> None:
     except KeyboardInterrupt:
         pass
     finally:
+        VOICE_SERVICE.close()
         server.server_close()
 
 

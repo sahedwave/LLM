@@ -9,7 +9,11 @@ import re
 from pathlib import Path
 from typing import Dict, Iterable, List, Sequence, Tuple, Union
 
-from synthetic_generator import generate_synthetic_nuclear_samples
+try:
+    from synthetic_generator import generate_synthetic_nuclear_samples
+except ModuleNotFoundError:  # pragma: no cover - legacy fallback for removed dataset path.
+    def generate_synthetic_nuclear_samples() -> List[Dict[str, str]]:
+        return []
 from src import config
 
 

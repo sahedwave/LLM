@@ -12,7 +12,15 @@ from typing import Dict, Iterable, List, Tuple
 
 from src import config
 from src.artifact_lock import build_artifact_manifest, load_artifact_manifest, save_artifact_manifest
-from src.data_loader import CONCEPT_DICTIONARY, _build_vocab_impl, normalize_text, split_into_sentences
+from src.data_loader import (
+    CONCEPT_DICTIONARY,
+    _build_vocab_impl,
+    infer_concept,
+    infer_entry_type,
+    infer_topic,
+    normalize_text,
+    split_into_sentences,
+)
 from src.execution_graph import (
     assert_execution_allowed,
     assert_side_execution_forbidden,
@@ -28,6 +36,14 @@ import_guard(GRAPH_NODE, require_artifacts=False)
 
 DATA_DIR = config.PROJECT_DIR / "data"
 SYNTHETIC_DATASET_PATH = DATA_DIR / "synthetic_concept_dataset.jsonl"
+JSON_BUILDER_DIR = Path(
+    os.environ.get(
+        "NUCLEAR_LLM_JSON_BUILDER_DIR",
+        str(config.PROJECT_DIR.parent.parent / "json builder"),
+    )
+).expanduser()
+JSON_BUILDER_DATA_DIR = JSON_BUILDER_DIR / "data"
+JSON_BUILDER_GLOB = "generated_dataset*.jsonl"
 CANONICAL_TYPES = ("definition", "explanation", "mechanism", "safety_analysis")
 TYPE_TARGETS = {
     "definition": 20,
@@ -112,6 +128,10 @@ Raw Data -> Cleaning -> Normalization -> Validation -> Causal Scoring -> Determi
 - Deterministic selection preserves concept balance while keeping mechanism samples as the dominant training signal.
 - Version locking still binds the resulting text, tokenizer vocabulary, and checkpoints through the existing artifact manifest.
 """
+SOURCE_PREFERENCE = {
+    "json_builder": 0,
+    "synthetic": 1,
+}
 
 
 @execution_guard("build_vocab", GRAPH_NODE)
@@ -120,6 +140,204 @@ def build_vocab(text: str) -> Tuple[Dict[str, int], Dict[int, str]]:
     if os.environ.get(config.ALLOW_VOCAB_BUILD_ENV) != "1":
         raise RuntimeError("VOCAB DRIFT VIOLATION")
     return _build_vocab_impl(text)
+
+
+def source_priority(source: str) -> int:
+    """Rank human-curated builder data ahead of synthetic backfill."""
+    return SOURCE_PREFERENCE.get(source.split(":", 1)[0], 99)
+
+
+def synthetic_backfill_enabled() -> bool:
+    """Return whether synthetic records should be used to fill missing coverage."""
+    return os.environ.get(config.ENABLE_SYNTHETIC_BACKFILL_ENV) == "1"
+
+
+def json_builder_dataset_paths() -> list[Path]:
+    """Locate generated JSONL datasets from the external raw-text builder project."""
+    if not JSON_BUILDER_DATA_DIR.exists():
+        return []
+    return sorted(
+        path
+        for path in JSON_BUILDER_DATA_DIR.glob(JSON_BUILDER_GLOB)
+        if path.is_file()
+    )
+
+
+def majority_value(values: list[str], fallback: str = "") -> str:
+    """Return the deterministic majority choice from a small string list."""
+    cleaned = [value.strip() for value in values if value and value.strip()]
+    if not cleaned:
+        return fallback
+    counts = Counter(cleaned)
+    return sorted(counts.items(), key=lambda item: (-item[1], item[0]))[0][0]
+
+
+def normalize_json_builder_row(row: Dict[str, object]) -> Dict[str, str] | None:
+    """Normalize one raw sentence-level builder row into a canonical training hint."""
+    text = normalize_record_text(str(row.get("text", "")))
+    if not text:
+        return None
+
+    provided_concept = str(row.get("concept", "")).strip()
+    if provided_concept.lower() == "general":
+        provided_concept = ""
+
+    topic = infer_concept(text, provided_concept=provided_concept)
+    if topic not in CONCEPT_DICTIONARY:
+        return None
+
+    category = infer_entry_type(text, provided_type=str(row.get("type", "")).strip())
+    subject = infer_topic(text)
+    if not subject or subject == "general reactor engineering":
+        subject = topic
+
+    return {
+        "topic": topic,
+        "subject": subject,
+        "category": category,
+        "text": text,
+    }
+
+
+def normalize_json_builder_structured_row(row: Dict[str, object]) -> Dict[str, object] | None:
+    """Normalize one structured builder row into the trainer-ready record format."""
+    answer = normalize_record_text(str(row.get("answer", "")))
+    reasoning = normalize_record_text(str(row.get("reasoning", "")))
+    effect = normalize_record_text(str(row.get("effect", "")))
+    if not answer or not reasoning or not effect:
+        return None
+
+    provided_topic = str(row.get("topic") or row.get("concept") or "").strip()
+    if provided_topic.lower() == "general":
+        provided_topic = ""
+
+    combined_text = normalize_record_text(" ".join([answer, reasoning, effect]))
+    topic = infer_concept(combined_text, provided_concept=provided_topic)
+    if topic not in CONCEPT_DICTIONARY:
+        return None
+
+    category = infer_entry_type(
+        combined_text,
+        provided_type=str(row.get("category") or row.get("type") or "").strip(),
+    )
+    if category not in CANONICAL_TYPES:
+        return None
+
+    subject = str(row.get("subject", "")).strip()
+    if not subject:
+        subject = infer_topic(combined_text)
+    if not subject or subject == "general reactor engineering":
+        subject = topic
+
+    scenario = str(row.get("scenario", "")).strip() or SCENARIO_BY_TYPE[category]
+    instruction = str(row.get("instruction", "")).strip() or INSTRUCTION_TOKEN_BY_TYPE[category]
+    question = normalize_record_text(str(row.get("question", "")))
+    if not question:
+        question = build_fallback_question(
+            {
+                "topic": topic,
+                "subject": subject,
+                "category": category,
+            }
+        )
+
+    return {
+        "source": "json_builder",
+        "topic": topic,
+        "subject": subject,
+        "category": category,
+        "scenario": scenario,
+        "instruction": instruction,
+        "question": question,
+        "answer": answer,
+        "reasoning": reasoning,
+        "effect": effect,
+        "text": normalize_record_text(str(row.get("text", ""))) or answer,
+        "source_chunk": normalize_record_text(str(row.get("source_chunk", ""))) or answer,
+    }
+
+
+def build_json_builder_candidates() -> List[Dict[str, object]]:
+    """Upgrade sentence-level builder JSONL rows into structured training candidates."""
+    candidates: List[Dict[str, object]] = []
+    for path in json_builder_dataset_paths():
+        sentence_rows: List[Dict[str, str]] = []
+        for line in path.read_text(encoding="utf-8").splitlines():
+            stripped = line.strip()
+            if not stripped:
+                continue
+            row = json.loads(stripped)
+            structured = normalize_json_builder_structured_row(row)
+            if structured is not None:
+                candidates.append(structured)
+                continue
+            normalized = normalize_json_builder_row(row)
+            if normalized is not None:
+                sentence_rows.append(normalized)
+
+        for window_size in (3, 4):
+            if len(sentence_rows) < window_size:
+                continue
+            for index in range(len(sentence_rows) - window_size + 1):
+                window = sentence_rows[index : index + window_size]
+                combined_text = normalize_record_text(" ".join(item["text"] for item in window))
+                if len(split_into_sentences(combined_text)) < 3:
+                    continue
+
+                topic = infer_concept(
+                    combined_text,
+                    provided_concept=majority_value(
+                        [item["topic"] for item in window if item["topic"] in CONCEPT_DICTIONARY]
+                    ),
+                )
+                if topic not in CONCEPT_DICTIONARY:
+                    continue
+
+                category = infer_entry_type(
+                    combined_text,
+                    provided_type=majority_value(
+                        [item["category"] for item in window if item["category"] in CANONICAL_TYPES],
+                        fallback="explanation",
+                    ),
+                )
+                if category not in CANONICAL_TYPES:
+                    continue
+
+                subject = infer_topic(combined_text)
+                if not subject or subject == "general reactor engineering":
+                    subject = infer_topic(window[0]["text"])
+                if not subject or subject == "general reactor engineering":
+                    subject = topic
+
+                answer = window[0]["text"]
+                reasoning = window[1]["text"]
+                effect = normalize_record_text(" ".join(item["text"] for item in window[2:]))
+                if not effect:
+                    continue
+
+                candidates.append(
+                    {
+                        "source": "json_builder",
+                        "topic": topic,
+                        "subject": subject,
+                        "category": category,
+                        "scenario": SCENARIO_BY_TYPE[category],
+                        "instruction": INSTRUCTION_TOKEN_BY_TYPE[category],
+                        "question": build_fallback_question(
+                            {
+                                "topic": topic,
+                                "subject": subject,
+                                "category": category,
+                            }
+                        ),
+                        "answer": answer,
+                        "reasoning": reasoning,
+                        "effect": effect,
+                        "text": combined_text,
+                    }
+                )
+
+    return candidates
 
 
 def spec(
@@ -1225,6 +1443,7 @@ def validate_and_rank_records(records: Iterable[Dict[str, object]]) -> Tuple[Lis
         key=lambda record: (
             str(record["topic"]),
             str(record["category"]),
+            source_priority(str(record["source"])),
             -float(record["concept_purity"]),
             -float(record["causal_quality"]),
             -float(record["causal_strength"]),
@@ -1352,13 +1571,28 @@ def source_breakdown(records: List[Dict[str, object]]) -> Dict[str, int]:
 @execution_guard("build_phase3_dataset", GRAPH_NODE)
 def build_phase3_dataset() -> Dict[str, object]:
     """Build the deterministic structured concept dataset used by training."""
-    write_synthetic_concept_dataset()
-    records_on_disk = parse_structured_dataset()
-    ranked_records, duplicate_count = validate_and_rank_records(records_on_disk)
-    try:
-        records = select_balanced_records(ranked_records)
-    except RuntimeError:
-        records = select_locked_compatible_records(ranked_records, records_on_disk)
+    json_builder_records = build_json_builder_candidates()
+    use_synthetic_backfill = synthetic_backfill_enabled()
+    if not json_builder_records and not use_synthetic_backfill:
+        raise RuntimeError(
+            "No JSON builder records were found. Generate data in '/Users/VIP/Documents/New project/json builder/data' "
+            "or set {0}=1 to allow synthetic backfill.".format(config.ENABLE_SYNTHETIC_BACKFILL_ENV)
+        )
+
+    synthetic_records = generate_structured_samples() if use_synthetic_backfill else []
+    candidate_records = json_builder_records + synthetic_records
+    if not candidate_records:
+        raise RuntimeError("No dataset candidates were available for build_phase3_dataset.")
+    ranked_records, duplicate_count = validate_and_rank_records(candidate_records)
+    if use_synthetic_backfill:
+        try:
+            records = select_balanced_records(ranked_records)
+        except RuntimeError:
+            records = select_locked_compatible_records(ranked_records, candidate_records)
+    else:
+        records = ranked_records
+        if not records:
+            raise RuntimeError("All JSON builder candidates were rejected during validation.")
 
     records = [hydrate_structured_record(record) for record in records]
     formatted_records = [record["training_text"] for record in records]
@@ -1387,6 +1621,9 @@ def build_phase3_dataset() -> Dict[str, object]:
     }
 
     print("total_records:", len(records))
+    print("json_builder_candidates:", len(json_builder_records))
+    print("synthetic_candidates:", len(synthetic_records))
+    print("synthetic_backfill_enabled:", use_synthetic_backfill)
     print("concept_distribution:", package["concept_distribution"])
     print("type_distribution:", package["type_distribution"])
     print("duplicate_count:", package["duplicate_count"])

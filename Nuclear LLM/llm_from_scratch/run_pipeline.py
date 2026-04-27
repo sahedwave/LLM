@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 import random
 
 import numpy as np
@@ -15,6 +16,33 @@ from src.dag_engine import run_dag
 eg._BOOTSTRAPPING = True
 
 
+def checkpoint_overwrite_allowed() -> bool:
+    """Return whether this run may replace the currently locked checkpoints."""
+    return os.environ.get(config.ALLOW_CHECKPOINT_OVERWRITE_ENV) == "1"
+
+
+def existing_checkpoint_paths() -> list[str]:
+    """Return the current checkpoint paths that would be overwritten by a full pipeline run."""
+    existing = []
+    for path in (config.MODEL_PATH, config.BEST_MODEL_PATH):
+        if path.exists():
+            existing.append(str(path))
+    return existing
+
+
+def enforce_checkpoint_protection() -> None:
+    """Refuse to start a full rebuild/retrain when protected checkpoints already exist."""
+    existing = existing_checkpoint_paths()
+    if existing and not checkpoint_overwrite_allowed():
+        raise RuntimeError(
+            "CHECKPOINT PROTECTION: run_pipeline.py would overwrite existing checkpoints: {0}. "
+            "Set {1}=1 only when you intentionally want to rebuild artifacts and replace the model.".format(
+                ", ".join(existing),
+                config.ALLOW_CHECKPOINT_OVERWRITE_ENV,
+            )
+        )
+
+
 def set_global_seed() -> None:
     """Apply the deterministic reproducibility contract."""
     random.seed(config.seed)
@@ -25,6 +53,7 @@ def set_global_seed() -> None:
 
 
 def main() -> None:
+    enforce_checkpoint_protection()
     eg.authorize_entrypoint()
     set_global_seed()
 

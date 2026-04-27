@@ -1,66 +1,4 @@
 {
-  "10e2fa8c6c53657e088b551ac03112b08d1c83ef268d5f9f7508dc012df241d9": {
-    "backend": "proxy",
-    "config_hash": "10e2fa8c6c53657e088b551ac03112b08d1c83ef268d5f9f7508dc012df241d9",
-    "flux_map": "rapid flux drop in the core after coolant density decreases",
-    "k_eff": 0.943,
-    "reaction_rates": {
-      "capture_rate": 0.61,
-      "fission_rate": 0.82,
-      "heat_removal": 0.38
-    },
-    "warnings": [
-      "subcritical tendency detected in proxy simulation"
-    ]
-  },
-  "1c6510101845f29e497f18f25ceced50edd32d8dbd48e6cad6b67c91600136ee": {
-    "backend": "proxy",
-    "config_hash": "1c6510101845f29e497f18f25ceced50edd32d8dbd48e6cad6b67c91600136ee",
-    "flux_map": "flux increases with positive reactivity insertion",
-    "k_eff": 1.015,
-    "reaction_rates": {
-      "capture_rate": 0.49,
-      "fission_rate": 1.08,
-      "heat_generation": 1.05
-    },
-    "warnings": []
-  },
-  "3739cf131c6daa57a66589093f59c53c23460f9d4c55f3ad8e9b7c0703b6a5d1": {
-    "backend": "proxy",
-    "config_hash": "3739cf131c6daa57a66589093f59c53c23460f9d4c55f3ad8e9b7c0703b6a5d1",
-    "flux_map": "low prompt flux with persistent post-shutdown heat source",
-    "k_eff": 0.98,
-    "reaction_rates": {
-      "capture_rate": 0.28,
-      "decay_heat": 0.67,
-      "fission_rate": 0.12
-    },
-    "warnings": []
-  },
-  "37d6e053e8abd8e70772358860f63eb67168dd7afd8acadd827c774c4581e7d7": {
-    "backend": "proxy",
-    "config_hash": "37d6e053e8abd8e70772358860f63eb67168dd7afd8acadd827c774c4581e7d7",
-    "flux_map": "low prompt flux with persistent post-shutdown heat source",
-    "k_eff": 0.98,
-    "reaction_rates": {
-      "capture_rate": 0.28,
-      "decay_heat": 0.67,
-      "fission_rate": 0.12
-    },
-    "warnings": []
-  },
-  "4d70ddfa6328417ca6bdb3dc38985e43a47e699d7c6a89dc139ab95ac0cc3465": {
-    "backend": "proxy",
-    "config_hash": "4d70ddfa6328417ca6bdb3dc38985e43a47e699d7c6a89dc139ab95ac0cc3465",
-    "flux_map": "flux increases with positive reactivity insertion",
-    "k_eff": 1.015,
-    "reaction_rates": {
-      "capture_rate": 0.49,
-      "fission_rate": 1.08,
-      "heat_generation": 1.05
-    },
-    "warnings": []
-  },
   "ddab9e1e3d1219a302c095a2025f67ec3a2254b50210894d782bcec4f04d8cd7": {
     "backend": "proxy",
     "config_hash": "ddab9e1e3d1219a302c095a2025f67ec3a2254b50210894d782bcec4f04d8cd7",
@@ -72,19 +10,5 @@
       "moderation_gain": 0.66
     },
     "warnings": []
-  },
-  "f68dafcf1a779033c967eaaf2dd75d8973b56df09630954e0bf02805b64b9585": {
-    "backend": "proxy",
-    "config_hash": "f68dafcf1a779033c967eaaf2dd75d8973b56df09630954e0bf02805b64b9585",
-    "flux_map": "flux softens as temperature feedback lowers effective multiplication",
-    "k_eff": 0.9835,
-    "reaction_rates": {
-      "capture_rate": 0.58,
-      "fission_rate": 0.88,
-      "pressure_rise": 0.71
-    },
-    "warnings": [
-      "elevated thermal state detected in proxy simulation"
-    ]
   }
 }
