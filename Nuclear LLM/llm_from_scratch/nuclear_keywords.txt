@@ -1,0 +1,60 @@
+# One keyword or phrase per line. Edit this file to control nuclear routing.
+neutron
+neutron flux
+neutron transport
+thermal neutrons
+fast neutrons
+flux
+reactivity
+reactor
+core
+coolant
+coolant flow
+coolant loss
+loss of coolant
+loss of coolant accident
+fission
+loca
+k-effective
+reactor kinetics
+critical heat flux
+departure from nucleate boiling
+heat transfer
+heat removal
+steam generator
+feedwater
+power density
+hot channel
+pressure vessel
+burnable absorber
+delayed neutrons
+prompt criticality
+control rods
+doppler
+xenon
+moderation
+resonance absorption
+diffusion
+scattering
+macroscopic cross-section
+microscopic cross-section
+decay heat removal
+emergency core cooling
+eccs
+station blackout
+reactor trip
+shutdown margin
+fuel pellet
+uranium dioxide
+zircaloy
+cladding
+corrosion
+embrittlement
+decay heat
+moderator
+containment
+boiling
+thermal
+burnup
+scram
+criticality
