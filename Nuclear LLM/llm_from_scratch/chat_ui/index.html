@@ -4,16 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nuclear LLM Chat</title>
-    <link rel="stylesheet" href="/static/styles.css" />
+    <link rel="stylesheet" href="/static/styles.css?v=20260427c" />
   </head>
   <body>
     <main class="app-shell">
       <section class="hero">
         <p class="eyebrow">Nuclear Engineering Tutor</p>
-        <h1>Chat With The Model</h1>
+        <h1>-_-? Chat e Monojog daw. </h1>
         <p class="subcopy">
-          Ask conceptual questions or simulation-worthy reactor questions. The UI will route them through the current
-          Stage 5 or Stage 6 path automatically.
+          Chat casually or ask nuclear engineering questions.
         </p>
       </section>
 
@@ -26,10 +25,19 @@
             id="message-input"
             name="message"
             rows="3"
-            placeholder="Ask about LOCA, neutron flux, decay heat, reactivity..."
+            placeholder="Say hi, or ask about LOCA, neutron flux, decay heat, reactivity..."
             required
           ></textarea>
           <div class="form-row">
+            <div class="voice-controls">
+              <button id="voice-toggle-button" type="button" class="secondary voice-button" title="Toggle reply voice">
+                Voice On
+              </button>
+              <button id="voice-stop-button" type="button" class="secondary voice-button" title="Stop current voice reply">
+                Stop Voice
+              </button>
+              <span id="voice-status" class="voice-status" aria-live="polite">Loading voice…</span>
+            </div>
             <button id="send-button" type="submit">Send</button>
             <button id="clear-button" type="button" class="secondary">Clear</button>
           </div>
@@ -47,6 +55,7 @@
       </article>
     </template>
 
-    <script src="/static/app.js"></script>
+    <script src="/static/app.js?v=20260427c"></script>
+    <script src="/static/browser_voice.js?v=20260427c" defer></script>
   </body>
 </html>
