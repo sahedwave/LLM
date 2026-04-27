@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "backend": "styletts2",
+  "python_executable": "../../.venv39/bin/python",
+  "default_emotion": "neutral",
+  "reference_voice_by_emotion": {
+    "neutral": "",
+    "happy": "",
+    "sad": "",
+    "angry": "",
+    "surprised": ""
+  },
+  "model_checkpoint_path": "",
+  "config_path": "",
+  "output_sample_rate": 24000,
+  "alpha": 0.3,
+  "beta": 0.7,
+  "diffusion_steps": 2,
+  "embedding_scale": 1.0
+}

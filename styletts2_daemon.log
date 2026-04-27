@@ -1,0 +1,355 @@
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:06:48.552891 79934 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:07:02.240318 15036 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:07:17.198033 18551 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:07:22.626544 18572 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:08:16.400601 57025 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+Cloning default target voice...
+177
+hˈaɪ ‖ hˈaʊ kən ˈaɪ hˈɛlp jˈu tədˈeɪ ‖
+hˈaɪ ‖ hˈaʊ kən ˈaɪ hˈɛlp jˈu tədˈeɪ ‖
+Cloning default target voice...
+177
+hˈaʊ kən ˈaɪ hˈɛlp jˈu tədˈeɪ ‖
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:10:47.427453 78207 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+Cloning default target voice...
+177
+ðˈɪs ˈɪz ə fɹˈɛʃ vˈɔɪs lˈeɪtənsi t͡ʃˈɛk ‖
+ðˈɪs ˈɪz ə fɹˈɛʃ vˈɔɪs lˈeɪtənsi t͡ʃˈɛk ‖
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:12:39.710561 15373 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+Cloning default target voice...
+177
+ðˈɪs ˈɪz ə sˈɛkənd fɹˈɛʃ vˈɔɪs lˈeɪtənsi t͡ʃˈɛk ˈæftɚ tˈunɪŋ ‖
+ðˈɪs ˈɪz ə sˈɛkənd fɹˈɛʃ vˈɔɪs lˈeɪtənsi t͡ʃˈɛk ˈæftɚ tˈunɪŋ ‖
+Cloning default target voice...
+177
+nˈoʊ pɹˈɑbləm ‖ kˈʌm bˈæk ˈɛnitˌaɪm ‖
+nˈoʊ pɹˈɑbləm ‖ kˈʌm bˈæk ˈɛnitˌaɪm ‖
+Cloning default target voice...
+177
+hˈaɪ ‖ hˈaʊ kən ˈaɪ hˈɛlp jˈu tədˈeɪ ‖
+hˈaɪ ‖ hˈaʊ kən ˈaɪ hˈɛlp jˈu tədˈeɪ ‖
+Cloning default target voice...
+177
+jˈu ˈɑɹ wˈɛlkəm ‖ ˈɛniθˌɪŋ ˈɛls ˈaɪ kən hˈɛlp wˈɪθ ‖
+jˈu ˈɑɹ wˈɛlkəm ‖ ˈɛniθˌɪŋ ˈɛls ˈaɪ kən hˈɛlp wˈɪθ ‖
+Cloning default target voice...
+177
+jˈu kˈʊd ˈæsk fɚ ðə ɹˈɛst ‖
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:28:28.107466 13376 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:29:42.517781 13541 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:34:47.004862 13961 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+[nltk_data] Downloading package punkt to /Users/VIP/Documents/New
+[nltk_data]     project/Nuclear LLM/llm_from_scratch/casual/voice_inte
+[nltk_data]     ract/.cache/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/api_core/_python_version_support.py:242: FutureWarning: You are using a non-supported Python version (3.9.6). Google will not post any further updates to google.api_core supporting this Python version. Please upgrade to the latest Python version, or at least Python 3.10, and then update google.api_core.
+  warnings.warn(message, FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.
+  warnings.warn(eol_message.format("3.9"), FutureWarning)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+W0427 17:37:03.985434 39966 torch/distributed/elastic/multiprocessing/redirects.py:29] NOTE: Redirects are currently not supported in Windows or MacOs.
+Invalid or missing model checkpoint path. Loading default model...
+Invalid or missing config path. Loading default config...
+Invalid ASR config path. Loading default config...
+Invalid ASR model checkpoint path. Loading default model...
+Invalid F0 model path. Loading default model...
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/utils/weight_norm.py:144: FutureWarning: `torch.nn.utils.weight_norm` is deprecated in favor of `torch.nn.utils.parametrizations.weight_norm`.
+  WeightNorm.apply(module, name, dim)
+/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/.venv39/lib/python3.9/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.2 and num_layers=1
+  warnings.warn(
+bert loaded
+bert_encoder loaded
+predictor loaded
+decoder loaded
+text_encoder loaded
+predictor_encoder loaded
+style_encoder loaded
+diffusion loaded
+text_aligner loaded
+pitch_extractor loaded
+mpd loaded
+msd loaded
+wd loaded
+Cloning default target voice...
+177
+dˈʌz ˈɛvɹiwˌʌn ‖ wˈɛn ˈɪz ðə wˈɚst pˈɑɹt fɚ jˈu ‖
+dˈʌz ˈɛvɹiwˌʌn ‖ wˈɛn ˈɪz ðə wˈɚst pˈɑɹt fɚ jˈu ‖
+Cloning default target voice...
+177
+ɡˈoʊ ɡɹˈæb sˈʌmθɪŋ tə dɹˈɪŋk ‖ wˈɔtɚ ˈɪz jˈuʒəli ə ɡˈʊd kˈɔl ‖
+ɡˈoʊ ɡɹˈæb sˈʌmθɪŋ tə dɹˈɪŋk ‖ wˈɔtɚ ˈɪz jˈuʒəli ə ɡˈʊd kˈɔl ‖
+Cloning default target voice...
+177
+ðˈæt ˈɪz ɹˈʌf ‖ hˈoʊpfəli ˈɪt dɪɹˈɛktli fɚ ðə sˈɪmpəl vˈɚʒən ˈænd ˈaɪ kən ˈaɪ kən ɪkspˈænd ðə ˈænsɚ ˈænd ʃˈoʊ ðə sˈeɪm pˈɔɪnt wˈɪθ klˈɪɹɚ wˈɚdɪŋ ˈænd lˈɛs kəmpɹˈɛʃən ‖
+ðˈæt ˈɪz ɹˈʌf ‖ hˈoʊpfəli ˈɪt dɪɹˈɛktli fɚ ðə sˈɪmpəl vˈɚʒən ˈænd ˈaɪ kən ˈaɪ kən ɪkspˈænd ðə ˈænsɚ ˈænd ʃˈoʊ ðə sˈeɪm pˈɔɪnt wˈɪθ klˈɪɹɚ wˈɚdɪŋ ˈænd lˈɛs kəmpɹˈɛʃən ‖
+Cloning default target voice...
+177
+ɡˈʊd tə hˈɪɹ ðˈæt ‖ wˈʌt hˈɛlpt ‖
+ɡˈʊd tə hˈɪɹ ðˈæt ‖ wˈʌt hˈɛlpt ‖
+Cloning default target voice...
+177
+wˈʌt ˈɪz ðə sˌɪt͡ʃuˈeɪʃən jˈu ˈɑɹ dˈilɪŋ wˈɪθ ‖
+wˈʌt ˈɪz ðə sˌɪt͡ʃuˈeɪʃən jˈu ˈɑɹ dˈilɪŋ wˈɪθ ‖
+Traceback (most recent call last):
+  File "/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/casual/voice_interact/styletts2_worker.py", line 245, in <module>
+    raise SystemExit(main())
+  File "/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/casual/voice_interact/styletts2_worker.py", line 223, in main
+    return run_daemon(settings_path)
+  File "/Users/VIP/Documents/New project/Nuclear LLM/llm_from_scratch/casual/voice_interact/styletts2_worker.py", line 162, in run_daemon
+    for raw_line in sys.stdin:
+KeyboardInterrupt

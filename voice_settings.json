@@ -1,0 +1,8 @@
+{
+  "enabled_by_default": true,
+  "backend": "styletts2",
+  "backend_url": "/api/tts",
+  "status_url": "/api/tts/status",
+  "autoplay": true,
+  "default_emotion": "neutral"
+}
